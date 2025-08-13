@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <link rel="stylesheet" href="stylesheet.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Calculator</title>
-  </head>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculator</h1>
 
-  <body>
-    <h1>Calculator</h1>
-    <input type="number" id="num1" placeholder="Enter first number" required>
-    <input type="number" id="num2" placeholder="Enter second number" required>
-    <button onclick="addNumbers()">Add</button>
-    <button onclick="subtractNumbers()">Subtract</button>
-    <button onclick="multiplyNumbers()">Multiply</button>
-    <button onclick="divideNumbers()">Divide</button>
-    
-    <p id="result"></p>
-    
+        <!-- Calculator display area -->
+        <div class="calc-display">
+            <input type="number" id="num1" placeholder="First number" required>
+            <input type="number" id="num2" placeholder="Second number" required>
+            <p id="result"></p>
+        </div>
+
+        <!-- Calculator buttons in grid -->
+        <div class="calc-buttons">
+            <button onclick="addNumbers()">+</button>
+            <button onclick="subtractNumbers()">−</button>
+            <button onclick="multiplyNumbers()">×</button>
+            <button onclick="divideNumbers()">÷</button>
+        </div>
+    </div>
+
     <!-- Custom Modal -->
     <div id="customModal" class="modal">
-      <div class="modal-content">
-        <span id="closeModal" class="close">&times;</span>
-        <p id="modalMessage"></p>
-      </div>
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
     </div>
-    
-  <script src = "script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
